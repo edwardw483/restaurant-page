@@ -1,22 +1,51 @@
 @font-face {
     font-family: 'Yellowtail';
-    src: url('./Yellowtail-Regular.ttf');
+    src: url('./Fonts/Yellowtail/Yellowtail-Regular.ttf');
     font-weight: 600;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Epilogue";
+    src: url('./Fonts/Epilogue/static/Epilogue-Light.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 a{
     text-decoration: none;
 }
 
-.header{
+body{
+    background-image: url('./Images/backgroundSushi.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+}
+
+.headerContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.header h1{
+.headerContainer h1{
     font-family: 'Yellowtail';
+    font-size: 120px;
+    color: #FFFAFA;
+    margin: 16px;
+    font-weight: 200;
 }
 
 .header-list{
@@ -24,11 +53,23 @@ a{
     list-style: none;
     justify-content: center;
     align-items: center;
-    /*padding: 12px 128px 0px 128px;*/
+    margin-bottom: 24px;
     gap: 24px;
 }
 
 .header-list li a{
-    color: black;
-    font-size: 18px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Epilogue';
+    margin: 8px;
+}
+
+.header-list li a{
+    transition: color 0.5s;
+
+    margin: 10px;
+}
+
+.header-list li a:hover{
+    color: #FFDEAD;
 }

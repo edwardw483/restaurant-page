@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './style.css';
+import background from './Images/backgroundSushi.jpeg';
 //import printMe from './contact.js'
 /*
 function component() {
@@ -24,7 +25,7 @@ function pageLoad() {
   document.body.appendChild(pageLoad());
 */
 function createHeader(){
-    const header = document.createElement('div');
+    const headerContainer = document.createElement('div');
     //restaurant and site name
     const siteName = document.createElement('h1');
     siteName.innerHTML = ("Roll Call");
@@ -55,11 +56,19 @@ function createHeader(){
 
     //add classes for CSS
     headerList.classList.add("header-list");
-    header.classList.add("header");
+    headerContainer.classList.add("headerContainer");
 
     //
-    header.appendChild(siteName);
-    header.appendChild(headerList);
-    return header;
+    headerContainer.appendChild(siteName);
+    headerContainer.appendChild(headerList);
+    return headerContainer;
 }
+/*
+function setBackground(){
+  const backgroundImage = new Image();
+  backgroundImage.src = background;
+  return backgroundImage;
+}
+*/
+//document.body.setAttribute.backgroundImage = setBackground;
 document.body.appendChild(createHeader());
