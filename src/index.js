@@ -3,28 +3,7 @@ import './style.css';
 import chef from './Images/chef.png';
 
 import setMenu from './menu.js'
-/*
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpacks'], ' ');
 
-  return element;
-}
-
-function pageLoad() {
-  const element = document.createElement('h1');
-  element.innerHTML = _.join(['Stunning', 'Sooshi'], ' ');
-  const btn = document.createElement('button');
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-  element.appendChild(btn);
-  return element;
-}
-  document.body.appendChild(component());
-  document.body.appendChild(pageLoad());
-*/
 function createHeader(){
     const headerContainer = document.createElement('div');
     //restaurant and site name
@@ -47,8 +26,8 @@ function createHeader(){
     const menu = document.createElement('li');
     const menuLink = document.createElement('a');
     menuLink.innerHTML = ("Menu");
-    menuLink.setAttribute("href", "./index.html");
-    menuLink.onlick = function(){
+    //menuLink.setAttribute("href", "./index.html");
+    menuLink.onclick = function(){
       setMenu();
     }
     menu.appendChild(menuLink);
