@@ -2,7 +2,7 @@ import _, { isEmpty } from 'lodash';
 import './style.css';
 import chef from './Images/chef.png';
 
-//import printMe from './contact.js'
+import setMenu from './menu.js'
 /*
 function component() {
   const element = document.createElement('div');
@@ -37,7 +37,10 @@ function createHeader(){
     const home = document.createElement('li');
     const homeLink = document.createElement('a');
     homeLink.innerHTML = ("Home");
-    homeLink.setAttribute("href", "./index.html");
+    //homeLink.setAttribute("href", "./index.html");
+    homeLink.onclick = function(){
+      setHome();
+    }
     home.appendChild(homeLink);
     headerList.appendChild(home);
 
@@ -45,6 +48,9 @@ function createHeader(){
     const menuLink = document.createElement('a');
     menuLink.innerHTML = ("Menu");
     menuLink.setAttribute("href", "./index.html");
+    menuLink.onlick = function(){
+      setMenu();
+    }
     menu.appendChild(menuLink);
     headerList.appendChild(menu);
 
@@ -56,6 +62,9 @@ function createHeader(){
     headerList.appendChild(contact);
 
     //add classes for CSS
+    /*homeLink.id = "home";
+    menuLink.id = "menu";
+    contactLink.id = "contact"; */
     headerList.classList.add("headerList");
     headerContainer.classList.add("headerContainer");
 
@@ -64,7 +73,7 @@ function createHeader(){
     headerContainer.appendChild(headerList);
     return headerContainer;
 }
-
+//initial creation of homepage
 function createMain(){
   //container
   const mainContainer = document.createElement('div');
@@ -87,6 +96,14 @@ function createMain(){
   mainContainer.classList.add("mainContainer");
   mainText.classList.add("mainText");
   return mainContainer;
+}
+//reset to homepage after link press
+function setHome(){
+  const content = document.querySelector('.content');
+  const child = content.lastElementChild;
+  content.removeChild(child);
+  const main = createMain();
+  content.appendChild(main);
 }
 
 function createContent(){
