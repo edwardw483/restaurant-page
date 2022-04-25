@@ -1,6 +1,7 @@
-import _ from 'lodash';
+import _, { isEmpty } from 'lodash';
 import './style.css';
-import background from './Images/backgroundSushi.jpeg';
+import chef from './Images/chef.png';
+
 //import printMe from './contact.js'
 /*
 function component() {
@@ -55,7 +56,7 @@ function createHeader(){
     headerList.appendChild(contact);
 
     //add classes for CSS
-    headerList.classList.add("header-list");
+    headerList.classList.add("headerList");
     headerContainer.classList.add("headerContainer");
 
     //
@@ -63,12 +64,40 @@ function createHeader(){
     headerContainer.appendChild(headerList);
     return headerContainer;
 }
-/*
-function setBackground(){
-  const backgroundImage = new Image();
-  backgroundImage.src = background;
-  return backgroundImage;
+
+function createMain(){
+  //container
+  const mainContainer = document.createElement('div');
+  //intro paragraph
+  const mainText = document.createElement('p');
+  mainText.innerHTML = ("Invented in the 19th century, sushi is a staple of Japanese cuisine. We offer the best sushi in the country, with an emphasis on fresh, seasonal ingredients for a refined culinary experience.");
+  mainContainer.appendChild(mainText);
+
+  //chef icon
+  const chefIcon = new Image();
+  chefIcon.src = chef;
+  mainContainer.appendChild(chefIcon);
+
+  //ending paragraph
+  const mainTextEnd = document.createElement('p');
+  mainTextEnd.innerHTML = ("Book a reservation today!")
+  mainContainer.appendChild(mainTextEnd);
+
+  //add classes for CSS
+  mainContainer.classList.add("mainContainer");
+  mainText.classList.add("mainText");
+  return mainContainer;
 }
-*/
-//document.body.setAttribute.backgroundImage = setBackground;
-document.body.appendChild(createHeader());
+
+function createContent(){
+    const content = document.createElement('div');
+    const header = createHeader();
+    const main = createMain();
+    content.appendChild(header);
+    content.appendChild(main);
+
+    content.classList.add("content");
+    return content;
+}
+
+document.body.appendChild(createContent());
