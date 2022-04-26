@@ -1,4 +1,3 @@
-import _, { isEmpty } from 'lodash';
 import './style.css';
 import chef from './Images/chef.png';
 import setMenu from './menu.js'
