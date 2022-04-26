@@ -37,12 +37,11 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 500px;
 }
 
 .headerContainer{
     display: flex;
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -51,7 +50,7 @@ html{
 
 .headerContainer h1{
     font-family: 'Yellowtail';
-    font-size: 120px;
+    font-size: min(15vw, 120px);
     color: #FFFAFA;
     margin: 16px;
     font-weight: 200;
@@ -63,12 +62,12 @@ html{
     justify-content: center;
     align-items: center;
     margin-bottom: 24px;
-    gap: 24px;
+    gap: min(2vw, 24px);
 }
 
 .headerList li a{
     color: white;
-    font-size: 30px;
+    font-size: min(10vw, 30px);
     font-family: 'Epilogue';
     margin: 8px;
 }
@@ -90,13 +89,13 @@ html{
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
     margin: 80px 20px;
-    max-width: 750px;
+    width: min(50vw, 750px);
     padding: 50px;
     gap: 10px;
 }
 
 .mainContainer img{
-    width: 50%;
+    width: min(50vw, 500px);
 }
 
 .mainContainer p{
@@ -121,4 +120,9 @@ html{
 
 .menuContainer img{
     width: 100%;
+}
+
+.responsive{
+    width: min(50vw, 680px);
+    height: min(50vh, 500px);
 }

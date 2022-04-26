@@ -1,8 +1,8 @@
 import _, { isEmpty } from 'lodash';
 import './style.css';
 import chef from './Images/chef.png';
-
 import setMenu from './menu.js'
+import setContact from './contact.js'
 
 function createHeader(){
     const headerContainer = document.createElement('div');
@@ -36,7 +36,10 @@ function createHeader(){
     const contact = document.createElement('li');
     const contactLink = document.createElement('a');
     contactLink.innerHTML = ("Contact");
-    contactLink.setAttribute("href", "./index.html");
+    //contactLink.setAttribute("href", "./index.html");
+    contactLink.onclick = function(){
+      setContact();
+    }
     contact.appendChild(contactLink);
     headerList.appendChild(contact);
 
