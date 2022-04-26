@@ -18,7 +18,7 @@ function createHeader(){
     //homeLink.setAttribute("href", "./index.html");
     homeLink.onclick = function(){
       setHome();
-    }
+    };
     home.appendChild(homeLink);
     headerList.appendChild(home);
 
@@ -28,7 +28,7 @@ function createHeader(){
     //menuLink.setAttribute("href", "./index.html");
     menuLink.onclick = function(){
       setMenu();
-    }
+    };
     menu.appendChild(menuLink);
     headerList.appendChild(menu);
 
@@ -38,7 +38,7 @@ function createHeader(){
     //contactLink.setAttribute("href", "./index.html");
     contactLink.onclick = function(){
       setContact();
-    }
+    };
     contact.appendChild(contactLink);
     headerList.appendChild(contact);
 
