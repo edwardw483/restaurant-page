@@ -70,7 +70,7 @@ function createMain(){
 
   //ending paragraph
   const mainTextEnd = document.createElement('p');
-  mainTextEnd.innerHTML = ("Book a reservation today!")
+  mainTextEnd.innerHTML = ("Make a reservation today!")
   mainContainer.appendChild(mainTextEnd);
 
   //add classes for CSS
