@@ -1,2 +1,2 @@
-Favicon: https://pngimg.com/image/98807
-Background Image: https://www.flickr.com/photos/gpeters/3196520984
+# Roll Call: A Website for a Sushi Restaurant
+This multi-paged website was built using HTML, CSS, and JavaScript. The focus of this project was to create a website using Webpack to bundle files while also utilizing npm to manage packages. 
