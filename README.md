@@ -1,6 +1,6 @@
 # Roll Call: A Website for a Sushi Restaurant
 
-This multi-paged website was built using HTML, CSS, and JavaScript. The focus of this project was to create a website using Webpack to bundle files while also utilizing npm to manage packages. 
+This multi-paged website was built using HTML, CSS, and JavaScript. The focus of this project was to create a website using Webpack to bundle files while also utilizing npm to manage packages. A live demo is available <a href="https://edwardw483.github.io/restaurant-page/" target="_blank">here</a>.
 
 ![Screen Shot 2022-04-25 at 22 29 57](https://user-images.githubusercontent.com/87340790/165208419-a78f2496-f7ce-4e98-80cf-afa9bfae25e2.png)
 
